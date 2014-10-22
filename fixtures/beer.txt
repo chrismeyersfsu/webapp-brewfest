@@ -1,0 +1,296 @@
++ General Admission
+Abita
+0 Purple Haze
+0 Pecan
+0 Jockamo
+0 Amber
+Angry Orchard 
+0 Crisp Apple
+0 Traditional Dry 
+0 Apple Ginger
+Anheuser-Busch
+0 Stella 
+0 Leffe 
+0 Hoegaarden
+0 Beck's
+0 Beck's Octoberfest 
+0 Quilmes
+0 Pacena 
+0 Pilsen
+0 Medalla Light
+0 Budweiser
+0 Project 12
+Bells
+0 Kalamazoo Stout 
+0 Two Hearted
+0 Oberon
+Blue Moon
+0 Blue Moon 
+0 Pale Ale
+0 Winter Abbey
+Blue Point Brewing 
+0 Toasted Lager
+0 Hoptical Illusion 
+0 RastafaRye
+0 White IPA
+Boulder
+Mojo
+0 Hazed and Infused 
+0 Seasonal
+Brooklyn
+0 Lager
+0 Pennant Ale
+0 Oktoberfest
+0 Black Choc. Stout 
+0 Pumpkin Ale
+Capital Brewing
+0 Wisconsin Amber 
+0 Supper Club
+Cigar City 
+0 Jai Alai 
+0 Maduro
+Crazy Mountain
+0 Mountain Livin
+0 Lava Lake
+0 Amber Ale
+Crispin
+0 Natural Original 
+0 Honey Crisp
+Dogfish Head 
+0 My Antonia 
+0 Burton Baton
+Eerie
+0 Railbender
+0 DeRailed
+0 Misery Bay IPA
+0 Engine 15
+Florida Beer Co. 
+0 Florida Lager
+0 K. W. Sunset Ale 
+OK. W.
+Southernmost Wheat 
+0 Swamp Ape IPA
+Foxbarrel Cider 
+0 Pacific pear
+0 Blackberry
+Green Flash
+0 West Coast IPA 
+0 Rayon Vert
+0 Hop Head Red 
+0 Double Stout
+0 Le Freak
+0 Imperial IPA
+0 Trippel
+0 San Diego Saison
+Green Room
+0 Pablo Bch Pale Ale
+Guiness
+0 Harp
+0 Guine ss
+0 Black Lager 
+0 Foreign Extra
+Henry Weinhards 
+0 Private Reserve 
+0 Amber Lager 
+0 IPA
+Highland
+0 Thunderstruck 
+Coffee Porter
+0 Black Mocha
+0 Kashmir IPA
+JW Dundee
+OEnglish Style Ale 
+0 Porter
+0 Pale Ale
+0 IPA
+Kona
+0 Longboard
+OPipeline Porter 
+0 Big Wave
+Lazy Magnolia 
+0 Southern Pecan 
+0 Deep South
+Leinkugels
+0 Lemon Berry 
+Shandy
+0 Snow Drift Vanilla 
+0 Porter
+Magic Hat
+0 #9
+0 Winter: Encore
+0 Heart of Darkness
+0 Mangers
+Merchant du Vin 
+0 Samuel Smith 
+Choc. Stout
+0 Samuel Smith 
+Organic Cider
+0 Lindemans 
+Framboise
+Momos
+0 Hopnosis Dbl. IPA 
+0 Big Papa Porter 
+0 011ie's Irish Red 
+0 Hop Harvest Fresh 
+Hop IPA
+Narragansett 
+0 Lager
+0 Cream
+Native
+0 Eleven Brown 
+0 Native Lager
+0 Newcastle
+Oskar Blues
+0 Dales Pale Ale 
+0 Mammas Little 
+Yellow Pils
+0 G'night
+0 Palm
+0 Peroni
+Pilsner Urquell
+Proof Brewing 
+0 Rye Ale
+0 IPA
+0 Pale Ale
+0 Oatmeal Stout
+Red Brick 
+0 Hoplanta 
+0 Blonde
+0 Redds Apple Ale
+Redhook
+0 ESB
+0 IPA
+0 Winterhook
+Sam Adams
+0 Black and Brew 
+0 Chocolate Bock 
+0 Tasman Red
+0 Oaked Porter
+0 Boston Lager
+Sea Dog 
+0 Blue
+Shiner Bock
+0 Shiner Bock
+0 Shiner Black
+0 Seasonal Winter 
+Shipyard
+0 Monkey Fist IPA 
+0 Prelude
+Shocktop
+0 Shocktop
+0 Raspberry
+0 End of the World 
+0 Pumpkin
+Sierra Nevada
+0 Pale Ale 
+0 Torpedo 
+0 Celebration
+0 Bigfoot 
+0 Tumbler
+Southern Tier 
+0 IPA
+0 2xIPA
+0 Unearthly 
+0 Iniquity 
+0 Phin and Matt's
+0 2XStout 
+0 Porter
+0 Krampus
+0 Pumking
+Stone
+0 IPA
+0 Levitation
+0 Arrogant Bastard
+Summit
+0 Extra Pale Ale 
+0 Horizon Red 
+0 Saga IPA
+Swamphead
+0 Cottonmouth 
+0 Midnight Oil 
+0 Stump Knocker 
+0 Big Nose
+0 Wild Night
+Sweetwater
+420
+0 IPA 
+0 Blue 
+0 Low"Rye"der
+Terrapin
+0 Easy Rider
+0 Monks Revenge 
+0 Hopsecutioner
+0 Golden Ale
+Three Palms
+0 Ruby Pogo Red 
+Twisted Pine
+0 Billie Chillies
+0 Hoppy Boy
+0 Big Shot Espresso
+Victory
+0 Golden Monkey
+0 Prima Pils 
+0 Storm King 
+0 Hop Wallop
+0 Warsteiner
+Well's
+0 Banana Bread
+0 Dbl. Choc. Stout
+Widmer Brothers 
+0 Drifter
+0 Hefeweizen
+0 Rotator IPA
+0 Omission Lager
+0 Omission Pale Ale 
+0 Brrr
+Woodchuck Cider 
+0 Amber
+0 Pear
+0 Granny
+0 Fall
+0 Pumpkin
++ VIP Beers
+VIP
+0 Abita Double Vanilla Dog
+0 Brooklyn Local 1 
+0 Brooklyn Local 2 
+0 Capital Brewing Autumnal Fire
+0 Dogfish Head Namaste
+0 Dogfish Head Theobroma
+0 Proof Vanilla Bean & Bourbon Oak Treated Oatmeal Stout 
+0 Sam Adams Imperial White
+0 Sam Adams Wee Heavy
+0 Sam Adams Norse Legend
+0 Siera Nevada Ovila 
+0 Terrapin So Fresh and So Green
+0 Terrapin Big Hoppy Monster
+0 Widmer Brothers Brrbon
+0 Widmer Brothers MarionBerry Gose 
+0 Widmer Brothers Old Embalmer
+0 Widmer Brothers SouthXNW
+0 Woodchuck Farmhouse
++ VIP Local Brew
+Beerd
+0 Graff-tastic Voyage 
+0 "3 Nines" Cherry Bourbon Stout
+Broken Cog
+0 Bier Van Huis Belgian Pale
+0 Potted Prince ESB
+GrassLands
+0 LeeRoy the Red Imperial Amber
+0 DC Honey Blonde 
+0 Secale Cereale (Rye) Saison
+0 Captain Quint's Hard Cider
+Hamerhead's Homebrew
+0 Thunderstorm 
+American IPA
+0 Rainwater Rye
+Pimlico Brewery 
+0 Over the Line Belgian IPA
+0 Fine Fraulein Hefeweizen
+TDO Brewing
+0 Sukie's IPA
+0 Bella's American Amber
+Zenoz
+0 Imperial Stout 
+0 Spiced Cider
