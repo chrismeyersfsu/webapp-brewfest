@@ -1,4 +1,4 @@
-webapp-beerfest
+webapp-brewfest
 ===============
 
-Tallahassee beerfest
+Tallahassee Brew Fest
