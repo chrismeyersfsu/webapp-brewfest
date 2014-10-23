@@ -1,14 +1,17 @@
-$(document).ready(function() {
-  var Store = window.localStorage;
-  var showPasteDialog = 'showPasteDialog';
-
-  $('#indexPage').on("pagecontainerload", function( event, ui ) {
-    var beerList = getBeerList();
-    beerList.forEach(function(beer) {
-      $(beer.checkbox).prop('checked', beer.checked).checkboxradio('refresh');
-    });
+function onLoad( event, ui ) {
+  console.log("Page container loaded");
+  var beerList = getBeerList();
+  beerList.forEach(function(beer) {
+    console.log("Beer checked:", beer.checked);
+    $(beer.checkbox).prop('checked', beer.checked).checkboxradio('refresh');
   });
+}
+$(document).on("pagecreate", onLoad);
 
+var Store = window.localStorage;
+
+$(document).ready(function() {
+  var showPasteDialog = 'showPasteDialog';
 
   $('input').change(function() {
     var beerName = $('label[for="' + this.id + '"]').html();
@@ -82,54 +85,55 @@ $(document).ready(function() {
       }
     });
   }
-
-  function getBeerList() {
-    var beerList = [];
-    var checkboxes = $('input:checkbox');
-    for (var i=0; i < checkboxes.length; ++i) {
-      var checkbox = checkboxes[i];
-      var label = $('label[for="' + checkbox.id + '"]');
-      var beerName = $(label).html();
-
-      var checked = Store.getItem(beerName);
-      if (checked === undefined || checked === null || checked === "false") {
-        checked = false;
-      } else {
-        checked = true;
-      }
-      beerList.push({
-        checkbox: checkbox,
-        name: beerName,
-        checked: checked
-      });
-    }
-
-    return beerList;
-  }
-
-  function getCheckedBeerNames() {
-    var beerNames = [];
-    getBeerList().forEach(function(beer) {
-      if (beer.checked) {
-        beerNames.push(beer.name);
-      }
-    });
-    return beerNames;
-  }
-
-  function popitup(url) {
-    var width  = 575,
-        height = 400,
-        left   = ($(window).width()  - width)  / 2,
-        top    = ($(window).height() - height) / 2,
-        opts   = 'status=1' +
-                 ',width='  + width  +
-                 ',height=' + height +
-                 ',top='    + top    +
-                 ',left='   + left;
-    newwindow=window.open(url,'_blank', opts);
-    if (window.focus) {newwindow.focus()}
-    return false;
-  }
 });
+
+
+function getBeerList() {
+  var beerList = [];
+  var checkboxes = $('input:checkbox');
+  for (var i=0; i < checkboxes.length; ++i) {
+    var checkbox = checkboxes[i];
+    var label = $('label[for="' + checkbox.id + '"]');
+    var beerName = $(label).html();
+
+    var checked = Store.getItem(beerName);
+    if (checked === undefined || checked === null || checked === "false") {
+      checked = false;
+    } else {
+      checked = true;
+    }
+    beerList.push({
+      checkbox: checkbox,
+      name: beerName,
+      checked: checked
+    });
+  }
+
+  return beerList;
+}
+
+function getCheckedBeerNames() {
+  var beerNames = [];
+  getBeerList().forEach(function(beer) {
+    if (beer.checked) {
+      beerNames.push(beer.name);
+    }
+  });
+  return beerNames;
+}
+
+function popitup(url) {
+  var width  = 575,
+      height = 400,
+      left   = ($(window).width()  - width)  / 2,
+      top    = ($(window).height() - height) / 2,
+      opts   = 'status=1' +
+               ',width='  + width  +
+               ',height=' + height +
+               ',top='    + top    +
+               ',left='   + left;
+  newwindow=window.open(url,'_blank', opts);
+  if (window.focus) {newwindow.focus()}
+  return false;
+}
 
