@@ -12,10 +12,24 @@
 <body>
     <script src="js/main.js"></script>
     <div id="indexPage" data-role="page">
+
+        <div data-role="panel" id="navPanel" data-theme="a">
+            <ul data-role="listview">
+                <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
+                <li><a href="#" id="export" data-rel="close">Export Beer</a></li>
+
+            <br />
+            <div style="text-align: center">
+            <h4>Made by Chris Meyers</h4>
+            <a href="https://twitter.com/intent/tweet?screen_name=oldmanmeyers85&text=%40brewfesttlh" class="twitter-mention-button" data-size="large" data-related="oldmanmeyers85">Tweet to @oldmanmeyers85</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>    
+            </div>
+            </ul>
+        </div><!-- /panel -->
  
-        <div data-role="header">
+        <div data-role="header" data-position="fixed">
             <h1>Brewfest</h1>
-            <button id="export">Export Beer</button>
+            <a href="#navPanel" data-icon="bars" data-iconpos="notext">Menu</a>
         </div><!-- /header -->
 
         <div data-role="content"> 
