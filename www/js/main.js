@@ -23,17 +23,26 @@ $(document).ready(function() {
 
   $('#export').click(function(e) {
     console.log("Exported");
-    var beerList = getBeerList();
-    var beerNames = [];
-    beerList.forEach(function(beer) {
-      if (beer.checked) {
-        beerNames.push(beer.name);
-      }
-    });
 
-    $('#pasteArea').val(beerNames);
+    $('#pasteArea').val(getCheckedBeerNames());
     $('#pasteDialog').popup('open');
   });
+
+  $('#exportLink').click(function(e) {
+    generateLink(getCheckedBeerNames().join('\n'), function(err, url) {
+      if (err) { return console.log("Error creating link:", err); }
+      // TODO: maybe window.location
+      popitup(url);
+    });
+  });
+
+  $('#exportTweet').click(function(e) {
+    console.log("Export tweet clicked");
+    generateLink(getCheckedBeerNames().join('\n'), function (err, fileUrl) {
+      var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out the list of beers I tried @brewfesttlh');
+      popitup(url);
+    });
+  }); // exportTweet
 /*
   $('#pasteArea').focus(function() {
       var $this = $(this);
@@ -48,9 +57,35 @@ $(document).ready(function() {
   });
 */
 
+  function generateLink(content, cb) {
+    var content = {
+      files : {
+        "content.txt" : {
+          content : content
+        }
+      }
+    };
+    $.ajax({
+      type: "POST",
+      async: false,
+      dataType: "json",
+      url: "https://api.github.com/gists", 
+      crossDomain: true,
+      data: JSON.stringify(content), 
+      success: function(res) {
+        console.log("Success!");
+        cb(null, res.files['content.txt'].raw_url);
+      },
+      error: function(res, textStatus, errorThrown) {
+        console.log("Fail!");
+        cb(errorThrown);
+      }
+    });
+  }
+
   function getBeerList() {
     var beerList = [];
-    var checkboxes = $('input');
+    var checkboxes = $('input:checkbox');
     for (var i=0; i < checkboxes.length; ++i) {
       var checkbox = checkboxes[i];
       var label = $('label[for="' + checkbox.id + '"]');
@@ -70,6 +105,31 @@ $(document).ready(function() {
     }
 
     return beerList;
+  }
+
+  function getCheckedBeerNames() {
+    var beerNames = [];
+    getBeerList().forEach(function(beer) {
+      if (beer.checked) {
+        beerNames.push(beer.name);
+      }
+    });
+    return beerNames;
+  }
+
+  function popitup(url) {
+    var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+    newwindow=window.open(url,'_blank', opts);
+    if (window.focus) {newwindow.focus()}
+    return false;
   }
 });
 

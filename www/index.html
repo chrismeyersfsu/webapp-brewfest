@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" /> 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
     <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/async/0.9.0/async.js"></script>
+    <!--<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+    <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
 </head>
 <body>
     <script src="js/main.js"></script>
@@ -17,12 +21,10 @@
             <ul data-role="listview">
                 <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
                 <li><a href="#" id="export" data-rel="close">Export Beer</a></li>
-
             <br />
             <div style="text-align: center">
             <h4>Made by Chris Meyers</h4>
-            <a href="https://twitter.com/intent/tweet?screen_name=oldmanmeyers85&text=%40brewfesttlh" class="twitter-mention-button" data-size="large" data-related="oldmanmeyers85">Tweet to @oldmanmeyers85</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>    
+            <a href="https://twitter.com/intent/tweet?screen_name=oldmanmeyers85&text=%40brewfesttlh" class="twitter-mention-button" data-size="large" data-related="oldmanmeyers85">Tweet at @oldmanmeyers85</a>
             </div>
             </ul>
         </div><!-- /panel -->
@@ -329,14 +331,17 @@
         </div><!-- /content -->
 
 
-        <div data-role="popup" id="pasteDialog" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+        <div data-role="popup" id="pasteDialog" data-overlay-theme="a" data-theme="a" data-dismissible="true" style="max-width:400px;">
             <div data-role="header" data-theme="a">
             <h1>Copy your beer</h1>
             </div>
             <div role="main" class="ui-content">
                 <textarea id="pasteArea" readonly="readonly" cols="50"></textarea>
                 <div style="text-align: center">
-                    <a href="#" id="dismiss" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Dismiss</a>
+                    <a href="#" id="exportLink" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Link</a>
+                <br />
+                <br />
+                    <a href="#" id="exportTweet" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Tweet</a>
                 </div>
             </div>
         </div>
