@@ -34,7 +34,7 @@ Blue Point Brewing
 0 RastafaRye
 0 White IPA
 Boulder
-Mojo
+0 Mojo
 0 Hazed and Infused 
 0 Seasonal
 Brooklyn
@@ -67,8 +67,7 @@ Eerie
 Florida Beer Co. 
 0 Florida Lager
 0 K. W. Sunset Ale 
-OK. W.
-Southernmost Wheat 
+0 K. W. Southernmost Wheat 
 0 Swamp Ape IPA
 Foxbarrel Cider 
 0 Pacific pear
@@ -94,18 +93,17 @@ Henry Weinhards
 0 Amber Lager 
 0 IPA
 Highland
-0 Thunderstruck 
-Coffee Porter
+0 Thunderstruck Coffee Porter
 0 Black Mocha
 0 Kashmir IPA
 JW Dundee
-OEnglish Style Ale 
+0 English Style Ale 
 0 Porter
 0 Pale Ale
 0 IPA
 Kona
 0 Longboard
-OPipeline Porter 
+0 Pipeline Porter 
 0 Big Wave
 Lazy Magnolia 
 0 Southern Pecan 
@@ -121,18 +119,14 @@ Magic Hat
 0 Heart of Darkness
 0 Mangers
 Merchant du Vin 
-0 Samuel Smith 
-Choc. Stout
-0 Samuel Smith 
-Organic Cider
-0 Lindemans 
-Framboise
+0 Samuel Smith Choc. Stout
+0 Samuel Smith Organic Cider
+0 Lindemans Framboise
 Momos
 0 Hopnosis Dbl. IPA 
 0 Big Papa Porter 
-0 011ie's Irish Red 
-0 Hop Harvest Fresh 
-Hop IPA
+0 O11ie's Irish Red 
+0 Hop Harvest Fresh Hop IPA
 Narragansett 
 0 Lager
 0 Cream
@@ -142,12 +136,10 @@ Native
 0 Newcastle
 Oskar Blues
 0 Dales Pale Ale 
-0 Mammas Little 
-Yellow Pils
+0 Mammas Little Yellow Pils
 0 G'night
 0 Palm
-0 Peroni
-Pilsner Urquell
+0 Peroni Pilsner Urquell
 Proof Brewing 
 0 Rye Ale
 0 IPA
@@ -211,8 +203,7 @@ Swamphead
 0 Stump Knocker 
 0 Big Nose
 0 Wild Night
-Sweetwater
-420
+Sweetwater 420
 0 IPA 
 0 Blue 
 0 Low"Rye"der

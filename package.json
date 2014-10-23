@@ -1,0 +1,21 @@
+{
+  "name": "webapp-brewfest",
+  "version": "1.0.0",
+  "description": "webapp-brewfest ===============",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrismeyersfsu/webapp-beerfest.git"
+  },
+  "author": "Chris Meyers",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/chrismeyersfsu/webapp-beerfest/issues"
+  },
+  "homepage": "https://github.com/chrismeyersfsu/webapp-beerfest",
+  "dependencies": {
+  }
+}

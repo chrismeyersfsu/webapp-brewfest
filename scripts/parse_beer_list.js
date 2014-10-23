@@ -1,4 +1,5 @@
 var fs = require('fs');
+var util = require('util');
 
 var beerRaw = fs.readFileSync('../fixtures/beer.txt');
 
@@ -39,6 +40,10 @@ for (var i=0; i < beerList.length; ++i) {
 			/* new title, push the old one */
 			if (titleEntry) {
 				obj.titles.push(titleEntry);
+				if (categoryEntry) {
+					titleEntry.categories.push(categoryEntry);
+					categoryEntry = null;
+				}
 			}
 			titleEntry = {
 				title : title,
@@ -63,7 +68,35 @@ titleEntry.categories.push(categoryEntry);
 obj.titles.push(titleEntry);
 titleEntry = categoryEntry = null;
 
-console.log(JSON.stringify(obj, null, 2));
+//console.log(JSON.stringify(obj, null, 2));
+
+var tabs = '\t\t\t\t\t';
+var HTML = ''
+var checkboxCount = 0;
+var elementHTML = '';
+for (var i=0; i < obj.titles.length; ++i) {
+	var titleEntry = obj.titles[i];
+	elementHTML = util.format('%s<div class="ui-bar ui-bar-a">%s</div>\n', tabs, titleEntry.title);
+	HTML += elementHTML;
+	for (var j=0; j < titleEntry.categories.length; ++j) {
+		var catEntry = titleEntry.categories[j];
+		elementHTML = util.format('%s<div class="ui-bar ui-bar-a">%s</div>\n', tabs, catEntry.category);
+		HTML += elementHTML;
+		for (var k=0; k < catEntry.beers.length; ++k) {
+			var beerEntry = catEntry.beers[k];
+			elementHTML = util.format('%s<input type="checkbox" name="checkbox-%s" id="checkbox-%s"><label for="checkbox-%s">%s</label>\n',
+			tabs,
+			checkboxCount,
+			checkboxCount,
+			checkboxCount,
+			beerEntry);
+
+			HTML += elementHTML;
+			checkboxCount++;
+		}
+	}
+}
+console.log(HTML);
 //console.log(beerList);
 
 
