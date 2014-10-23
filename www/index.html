@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" /> 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
     <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.js"></script>
 </head>
 <body>
     <script src="js/main.js"></script>
     <div data-role="page">
  
         <div data-role="header">
-            <h1>Tallahassee Brewfest</h1>
+            <h1>Brewfest</h1>
+            <button id="export">Copy Beers</button>
         </div><!-- /header -->
 
         <div data-role="content"> 
@@ -317,6 +319,19 @@
                 </fieldset>
             </ul>
         </div><!-- /content -->
+
+
+        <div data-role="popup" id="pasteDialog" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
+            <div data-role="header" data-theme="a">
+            <h1>Try to Paste</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h3 class="ui-title">Paste your beer list below to see what it looks like.</h3>
+                <p><textarea></textarea>
+                <a href="#" id="dismiss" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Dismiss</a>
+                <a href="#" id="agitated" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">I know how to paste</a>
+            </div>
+        </div>
  
         <div data-role="footer">
             <h4>Made by Chris Meyers</h4>
