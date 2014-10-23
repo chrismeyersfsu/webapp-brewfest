@@ -2,9 +2,11 @@ $(document).ready(function() {
   var Store = window.localStorage;
   var showPasteDialog = 'showPasteDialog';
 
-  var beerList = getBeerList();
-  beerList.forEach(function(beer) {
-    $(beer.checkbox).prop('checked', beer.checked).checkboxradio('refresh');
+  $('#indexPage').on("pagecontainerload", function( event, ui ) {
+    var beerList = getBeerList();
+    beerList.forEach(function(beer) {
+      $(beer.checkbox).prop('checked', beer.checked).checkboxradio('refresh');
+    });
   });
 
 
