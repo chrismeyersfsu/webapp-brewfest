@@ -57,6 +57,10 @@ $(document).ready(function() {
       popitup(url);
     });
   }); // exportTweet
+
+  $('#fullscreen').click(function(e) {
+    toggleFullScreen();
+  });
 });
 
 
@@ -148,3 +152,17 @@ function getBeerNameFromLabel(label) {
   return $(label).attr('beer');
 }
 
+function toggleFullScreen() {
+  var doc = window.document;
+  var docEl = doc.documentElement;
+
+  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+    requestFullScreen.call(docEl);
+  }
+  else {
+    cancelFullScreen.call(doc);
+  }
+}

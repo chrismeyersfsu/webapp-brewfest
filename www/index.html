@@ -3,6 +3,8 @@
 <head>
     <title>My Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">    <!-- ios fullscreen, when launched from desktop shortcut -->
+    <meta name="mobile-web-app-capable" content="yes"> <!-- chrome fullscreen, when launched from desktop shortcut -->
     <link rel="stylesheet" href="themes/brewfest.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" /> 
@@ -29,9 +31,10 @@
             </ul>
         </div><!-- /panel -->
  
-        <div data-role="header" data-position="fixed">
+        <div data-role="header" data-position="fixed" data-fullscreen="true">
             <h1>Brewfest</h1>
             <a href="#navPanel" data-icon="bars" data-iconpos="notext">Menu</a>
+            <a href="#" id="fullscreen" data-role="none"><img src="images/Full-Screen-32x32.png"></a>
         </div><!-- /header -->
 
         <div data-role="content"> 
