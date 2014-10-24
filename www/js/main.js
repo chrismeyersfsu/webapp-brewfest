@@ -50,20 +50,19 @@ $(document).ready(function() {
   });
 
   $('#export').click(function(e) {
-    var beerNames = getCheckedBeerNames();
+    var beerNames = generateFullBeerNames(getCheckedBeerList());
     if (!beerNames || beerNames.length == 0) {
-      console.log("my container");
       $('#exportNothingDialog').popup('open');
       //$(document).pagecontainer('change', $('#exportNothingDialog'), { role: "dialog" });
     } else {
-      console.log("Beers: ", beerNames);
-      $('#pasteArea').val(beerNames);
+      $('#pasteArea').val(beerNames.join('\n'));
       $('#exportDialog').popup('open');
     }
   });
 
   $('#exportLink').click(function(e) {
-    generateLink(getCheckedBeerNames().join('\n'), function(err, url) {
+    var beerNames = generateFullBeerNames(getCheckedBeerList());
+    generateLink(beerNames.join('\n'), function(err, url) {
       if (err) { return console.log("Error creating link:", err); }
       // TODO: maybe window.location
       popitup(url);
@@ -71,7 +70,8 @@ $(document).ready(function() {
   });
 
   $('#exportTweet').click(function(e) {
-    generateLink(getCheckedBeerNames().join('\n'), function (err, fileUrl) {
+    var beerNames = generateFullBeerNames(getCheckedBeerList());
+    generateLink(beerNames.join('\n'), function (err, fileUrl) {
       var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out the list of beers I tried @brewfesttlh');
       popitup(url);
     });
@@ -133,6 +133,7 @@ function getBeerList() {
     var checkbox = checkboxes[i];
     var label = $('label[for="' + checkbox.id + '"]');
     var beerName = getBeerNameFromLabel(label);
+    var brewer = getBrewerFromLabel(label);
 
     var checked = Store.getItem(beerName);
     var rating = Store.getItem(beerName+'-rating');
@@ -144,6 +145,7 @@ function getBeerList() {
     beerList.push({
       checkbox: checkbox,
       name: beerName,
+      brewer: brewer,
       checked: checked,
       rating: rating
     });
@@ -152,15 +154,24 @@ function getBeerList() {
   return beerList;
 }
 
-function getCheckedBeerNames() {
-  var beerNames = [];
+function getCheckedBeerList() {
+  var beerList = [];
   getBeerList().forEach(function(beer) {
     if (beer.checked) {
-      beerNames.push(beer.name);
+      beerList.push(beer);
     }
   });
+  return beerList;
+}
+
+function generateFullBeerNames(beerList) {
+  var beerNames = [];
+  for (var i=0; i < beerList.length; ++i) {
+    beerNames.push(beerList[i].brewer + ' - ' + beerList[i].name);
+  }
   return beerNames;
 }
+
 
 function popitup(url) {
   var width  = 575,
@@ -188,6 +199,10 @@ function appendPumpkin(element) {
 
 function getBeerNameFromLabel(label) {
   return $(label).attr('beer');
+}
+
+function getBrewerFromLabel(label) {
+  return $(label).attr('brewer');
 }
 
 function toggleFullScreen() {

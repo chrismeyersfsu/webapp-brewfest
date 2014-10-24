@@ -29,7 +29,7 @@ for (var i=0; i < beerList.length; ++i) {
 		res = beerRe.exec(entry);
 		//console.log("\t\tBeer: ", res[2]);
 		if (categoryEntry) {
-			categoryEntry.beers.push(res[2]);
+			categoryEntry.beers.push(res[2].trim());
 		} else {
 			console.error("Not category for beer:", res[2]);
 		}
@@ -56,7 +56,7 @@ for (var i=0; i < beerList.length; ++i) {
 				titleEntry.categories.push(categoryEntry);
 			}
 			categoryEntry = {
-				category: category,
+				category: category.trim(),
 				beers : []
 			};
 			//console.log("\tCategory: ", entry);
@@ -84,11 +84,12 @@ for (var i=0; i < obj.titles.length; ++i) {
 		HTML += elementHTML;
 		for (var k=0; k < catEntry.beers.length; ++k) {
 			var beerEntry = catEntry.beers[k];
-			elementHTML = util.format('%s<input type="checkbox" name="checkbox-%s" id="checkbox-%s"><label for="checkbox-%s" beer="%s">%s</label>\n',
+			elementHTML = util.format('%s<input type="checkbox" name="checkbox-%s" id="checkbox-%s"><label for="checkbox-%s" brewer="%s" beer="%s">%s</label>\n',
 			tabs,
 			checkboxCount,
 			checkboxCount,
 			checkboxCount,
+			catEntry.category,
 			beerEntry,
 			beerEntry);
 
