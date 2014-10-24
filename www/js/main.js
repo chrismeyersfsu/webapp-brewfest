@@ -25,12 +25,14 @@ $(document).ready(function() {
 
     var label = $(this).prev();
     var count = countPumpkins(label);
-    if (count >= 3) {
+    if (this.checked == true && count == 0) {
+      // noop
+    } else if (count >= 3) {
       this.checked = false;
       $(label).children('img').remove();
     } else {
       this.checked = true;
-      label.append('<img style="float:right" src="images/pumpkin-icon-24x24.png">');
+      label.append('<img class="picture" src="images/Pumpkin-icon-24x24.png">');
     }
   });
 

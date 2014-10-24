@@ -1,7 +1,13 @@
-body {
-  font-size: 20px; // You can even use !important 
+
+.picture {
+	max-height:100%;
+	max-width:100%;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	float: right;
 }
 
-label {
-	font-size: 19px !important;
+.label-full {
+	width: 50%,
 }
