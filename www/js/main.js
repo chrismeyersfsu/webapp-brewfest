@@ -1,3 +1,5 @@
+var Store = window.localStorage;
+
 function onLoad( event, ui ) {
   var beerList = getBeerList();
   for (var h=0; h < beerList.length; ++h) {
@@ -13,6 +15,7 @@ function onLoad( event, ui ) {
   }
   Pace.stop();
 }
+
 $(document).on('pagecreate', function(e) {
   if (e.target.id == "indexPage") {
     onLoad();
@@ -21,10 +24,7 @@ $(document).on('pagecreate', function(e) {
   }
 });
 
-var Store = window.localStorage;
-
 $(document).ready(function() {
-
   $(document).pagecontainer({ defaults: true });
   var showPasteDialog = 'showPasteDialog';
 
@@ -100,8 +100,7 @@ $(document).ready(function() {
     $('#navPanel').panel('toggle');
   });
 */
-});
-
+}); // ready()
 
 function generateLink(content, cb) {
   var content = {
