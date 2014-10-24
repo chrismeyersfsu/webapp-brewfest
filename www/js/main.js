@@ -70,8 +70,12 @@ $(document).ready(function() {
 
   $('#exportTweet').click(function(e) {
     var beerNames = generateFullBeerNames(getCheckedBeerList());
+    if (!beerNames || beerNames.length == 0) {
+      $('#exportNothingDialog').popup('open');
+      return;
+    }
     generateLink(beerNames.join('\n'), function (err, fileUrl) {
-      var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out my beer from @brewfesttlh')+'&hashtags=beerlist,brewfesttlh2014';
+      var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out my beer from @brewfesttlh')+'&hashtags=brewcard,brewfesttlh2014';
       popitup(url);
     });
   }); // exportTweet
