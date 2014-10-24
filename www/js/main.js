@@ -76,9 +76,11 @@ $(document).ready(function() {
     $('#navPanel').panel('toggle');
     return true;
   });
+  /*
   $('#clear-no').click(function(e) {
     $('#navPanel').panel('toggle');
   });
+*/
 });
 
 
