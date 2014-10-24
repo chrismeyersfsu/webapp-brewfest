@@ -65,6 +65,17 @@ $(document).ready(function() {
   $('#refresh').click(function(e) {
     window.location.reload();
   });
+
+  $('#clear').click(function(e) {
+    $('#clearDialog').popup('open');
+  });
+
+  $('#clear-yes').click(function(e) {
+    console.log("Clearing");
+    resetAllBeer();
+    $('#navPanel').panel('toggle');
+    return true;
+  });
 });
 
 
@@ -149,7 +160,7 @@ function countPumpkins(element) {
 }
 
 function appendPumpkin(element) {
-  element.append('<img class="picture" src="images/Pumpkin-icon-24x24.png">');
+  element.append('<img class="rating-pic" src="images/Pumpkin-icon-24x24.png">');
 }
 
 function getBeerNameFromLabel(label) {
@@ -168,5 +179,19 @@ function toggleFullScreen() {
   }
   else {
     cancelFullScreen.call(doc);
+  }
+}
+
+function resetAllBeer() {
+  var checkboxes = $('input:checkbox');
+  localStorage.clear();
+  for (var i=0; i < checkboxes.length; ++i) {
+    var checkbox = checkboxes[i];
+    $(checkbox).prop('checked', false).checkboxradio('refresh');
+  }
+  var ratings = $('.rating-pic');
+  for (var i=0; i < ratings.length; ++i) {
+    var rating = ratings[i];
+    $(rating).remove();
   }
 }
