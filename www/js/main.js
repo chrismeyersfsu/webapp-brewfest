@@ -22,6 +22,16 @@ $(document).ready(function() {
       console.log("Saving FALSE: ", beerName);
       Store.setItem(beerName, "false");
     }
+
+    var label = $(this).prev();
+    var count = countPumpkins(label);
+    if (count >= 3) {
+      this.checked = false;
+      $(label).children('img').remove();
+    } else {
+      this.checked = true;
+      label.append('<img style="float:right" src="images/pumpkin-icon-24x24.png">');
+    }
   });
 
   $('#export').click(function(e) {
@@ -46,47 +56,34 @@ $(document).ready(function() {
       popitup(url);
     });
   }); // exportTweet
-/*
-  $('#pasteArea').focus(function() {
-      var $this = $(this);
-      $this.select();
-
-      // Work around Chrome's little problem
-      $this.mouseup(function() {
-          // Prevent further mouseup intervention
-          $this.unbind("mouseup");
-          return false;
-      });
-  });
-*/
-
-  function generateLink(content, cb) {
-    var content = {
-      files : {
-        "content.txt" : {
-          content : content
-        }
-      }
-    };
-    $.ajax({
-      type: "POST",
-      async: false,
-      dataType: "json",
-      url: "https://api.github.com/gists", 
-      crossDomain: true,
-      data: JSON.stringify(content), 
-      success: function(res) {
-        console.log("Success!");
-        cb(null, res.files['content.txt'].raw_url);
-      },
-      error: function(res, textStatus, errorThrown) {
-        console.log("Fail!");
-        cb(errorThrown);
-      }
-    });
-  }
 });
 
+
+function generateLink(content, cb) {
+  var content = {
+    files : {
+      "content.txt" : {
+        content : content
+      }
+    }
+  };
+  $.ajax({
+    type: "POST",
+    async: false,
+    dataType: "json",
+    url: "https://api.github.com/gists", 
+    crossDomain: true,
+    data: JSON.stringify(content), 
+    success: function(res) {
+      console.log("Success!");
+      cb(null, res.files['content.txt'].raw_url);
+    },
+    error: function(res, textStatus, errorThrown) {
+      console.log("Fail!");
+      cb(errorThrown);
+    }
+  });
+}
 
 function getBeerList() {
   var beerList = [];
@@ -105,7 +102,8 @@ function getBeerList() {
     beerList.push({
       checkbox: checkbox,
       name: beerName,
-      checked: checked
+      checked: checked,
+      rating: 0
     });
   }
 
@@ -135,5 +133,9 @@ function popitup(url) {
   newwindow=window.open(url,'_blank', opts);
   if (window.focus) {newwindow.focus()}
   return false;
+}
+
+function countPumpkins(element) {
+  return $(element).children('img').length;
 }
 
