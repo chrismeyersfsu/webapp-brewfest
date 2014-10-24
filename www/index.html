@@ -336,7 +336,7 @@
         </div><!-- /content -->
 
 
-        <div data-role="popup" id="pasteDialog" data-overlay-theme="a" data-theme="a" data-dismissible="true" style="max-width:400px;">
+        <div data-role="popup" id="exportDialog" data-overlay-theme="a" data-theme="a" data-dismissible="true" style="max-width:400px;">
             <div data-role="header" data-theme="a">
             <h1>Copy your beer</h1>
             </div>
@@ -365,6 +365,18 @@
             </div>
         </div>
  
+        <div data-role="popup" id="exportNothingDialog" data-close-btn="right" data-overlay-theme="a" data-theme="a" data-dismissible="true" style="max-width:400px;">
+            <div data-role="header" data-theme="a">
+                <h1>No Beer to Export</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h1>Try marking a beer first</h1>
+                <div style="text-align: center">
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Ok</a>
+                </div>
+            </div>
+        </div>
+
  
         <div data-role="footer">
             <h4>Made by Chris Meyers</h4>
@@ -375,5 +387,7 @@
         </div><!-- /footer -->
  
     </div><!-- /page -->
+
+
 </body>
 </html>

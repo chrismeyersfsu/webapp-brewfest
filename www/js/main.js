@@ -1,20 +1,29 @@
 function onLoad( event, ui ) {
   var beerList = getBeerList();
-  beerList.forEach(function(beer) {
+  for (var h=0; h < beerList.length; ++h) {
+    var beer = beerList[h];
     for (var i=0; i < beer.rating; ++i) {
       appendPumpkin($(beer.checkbox).prev());
     }
     if (beer.checked) {
       console.log("Beer checked");
     }
-    $(beer.checkbox).prop('checked', beer.checked).checkboxradio('refresh');
-  });
+    var element = $(beer.checkbox).attr('checked', beer.checked);
+    element.checkboxradio('refresh');
+  }
 }
-$(document).on("pagecreate", onLoad);
+$(document).on('pagecreate', function(e) {
+  if (e.target.id == "indexPage") {
+    onLoad();
+  } else {
+    console.log("Id: ", e.target.id);
+  }
+});
 
 var Store = window.localStorage;
 
 $(document).ready(function() {
+  $(document).pagecontainer({ defaults: true });
   var showPasteDialog = 'showPasteDialog';
 
   $('input').change(function() {
@@ -39,8 +48,16 @@ $(document).ready(function() {
   });
 
   $('#export').click(function(e) {
-    $('#pasteArea').val(getCheckedBeerNames());
-    $('#pasteDialog').popup('open');
+    var beerNames = getCheckedBeerNames();
+    if (!beerNames || beerNames.length == 0) {
+      console.log("my container");
+      $('#exportNothingDialog').popup('open');
+      //$(document).pagecontainer('change', $('#exportNothingDialog'), { role: "dialog" });
+    } else {
+      console.log("Beers: ", beerNames);
+      $('#pasteArea').val(beerNames);
+      $('#exportDialog').popup('open');
+    }
   });
 
   $('#exportLink').click(function(e) {
