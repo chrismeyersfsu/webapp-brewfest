@@ -1,0 +1,468 @@
+{
+    "General": [
+        {
+            "brewer": "Abita",
+            "beers": [
+                "Amber",
+                "Andygator",
+                "Jockamo IPA",
+                "Purple Haze"
+            ]
+        },
+        {
+            "brewer": "Anchor",
+            "beers": [
+                "California Lager",
+                "IPA",
+                "Steam",
+                "Big Leaf Maple"
+            ]
+        },
+        {
+            "brewer": "Bell's Brewery, Inc.",
+            "beers": [
+                "Oberon Ale",
+                "Special Double Cream Stout",
+                "Two Hearted IPA"
+            ]
+        },
+        {
+            "brewer": "Big Storm",
+            "beers": [
+                "Arcus IPA",
+                "Imperial Seasonal",
+                "Seasonal",
+                "Wavemaker Amber"
+            ]
+        },
+        {
+            "brewer": "Blue Moon",
+            "beers": [
+                "Blue Moon",
+                "Pumpkin Ale",
+                "Leinenkugel Orange Shandy",
+                "Leinekugel Oktoberfest"
+            ]
+        },
+        {
+            "brewer": "Blue Point",
+            "beers": [
+                "Hoptical Illusion",
+                "Pumpkin Ale",
+                "Toasted Lager"
+            ]
+        },
+        {
+            "brewer": "Boston",
+            "beers": [
+                "Cinnful Apple",
+                "Jacko Traveler",
+                "Rebel IPA",
+                "Octoberfest"
+            ]
+        },
+        {
+            "brewer": "Boulder",
+            "beers": [
+                "Dragonhosen Imperial Oktoberfest",
+                "Hazed & Infused Dry-Hopped Ale",
+                "Shake Chocolate Porter"
+            ]
+        },
+        {
+            "brewer": "Boulevard",
+            "beers": [
+                "80-Acre",
+                "Pop Up Session IPA",
+                "Single Wide IPA",
+                "Tank 7 Farmhouse Ale"
+            ]
+        },
+        {
+            "brewer": "Cigar City",
+            "beers": [
+                "Cigar City Hard Cider",
+                "Jai Alai IPA",
+                "Maduro Brown Ale"
+            ]
+        },
+        {
+            "brewer": "Craft Brew Alliance",
+            "beers": [
+                "Kona Big Wave",
+                "Kona Castaway IPA",
+                "Kona Fire Rock Pale Ale",
+                "Redhook Audible Ale",
+                "Redhook Long Hammer IPA",
+                "Widmer Alchemy",
+                "Widmer Upheaval"
+            ]
+        },
+        {
+            "brewer": "Florida Avenue",
+            "beers": [
+                "Betchy Brown"
+            ]
+        },
+        {
+            "brewer": "Florida Beer",
+            "beers": [
+                "Florida Lager",
+                "Key West Southernmost Wheat",
+                "Key West Sunset Ale",
+                "Swamp Ape DIPA"
+            ]
+        },
+        {
+            "brewer": "Founders",
+            "beers": [
+                "All Day IPA",
+                "Porter"
+            ]
+        },
+        {
+            "brewer": "Goose Island",
+            "beers": [
+                "312 Urban Wheat Ale",
+                "Endless IPA",
+                "Honker's Ale",
+                "Matilda",
+                "Sofie"
+            ]
+        },
+        {
+            "brewer": "Green Flash",
+            "beers": [
+                "Double Stout",
+                "Green Bullet",
+                "Hop Head Red",
+                "West Coast IPA"
+            ]
+        },
+        {
+            "brewer": "Highland",
+            "beers": [
+                "Gaelic Ale",
+                "Oatmeal Porter",
+                "St. Terese's Pale Ale",
+                "20th Aniv. Kelly's Kolsch",
+                "Descent Kolsch"
+            ]
+        },
+        {
+            "brewer": "InBev (Anheuser-Busch)",
+            "beers": [
+                "Shocktop",
+                "Shocktop Seasonal",
+                "Becks",
+                "Becks Dark",
+                "Stella",
+                "Stella Cidre",
+                "Johnny Appleseed",
+                "Presidente",
+                "Budweiser",
+                "Black Crown"
+            ]
+        },
+        {
+            "brewer": "Intuition Ale Works",
+            "beers": [
+                "Doobie",
+                "Jon Boat",
+                "King St. Stout",
+                "People's Pale Ale"
+            ]
+        },
+        {
+            "brewer": "Lagunitas",
+            "beers": [
+                "Lagunitas IPA",
+                "Little Sumpin Sumpin",
+                "Maximus",
+                "Pils"
+            ]
+        },
+        {
+            "brewer": "Lexington Brewing and Distilling Co.",
+            "beers": [
+                "Kentucky Bourbon Barrel Ale",
+                "Kentucky Bourbon Barrel Stout"
+            ]
+        },
+        {
+            "brewer": "Magic Hat",
+            "beers": [
+                "#9",
+                "Dream Machine",
+                "Feast of Fools",
+                "Seasonal"
+            ]
+        },
+        {
+            "brewer": "Merchant du Vin",
+            "beers": [
+                "Ayinger Brau Wisse",
+                "Lindemans Framboise",
+                "Samuel Smith Organic Cider",
+                "Samuel Smith Organic Chocolate Stout",
+                "Samuel Smith Organic Indian Ale"
+            ]
+        },
+        {
+            "brewer": "New Belgium",
+            "beers": [
+                "1554",
+                "Fat Tire",
+                "Ranger IPA",
+                "Tour De Fall"
+            ]
+        },
+        {
+            "brewer": "Oyster City",
+            "beers": [
+                "Mill Pond Dirty Blonde Ale",
+                "Hooter Brown Ale",
+                "1st Light",
+                "Red Snapper IPA"
+            ]
+        },
+        {
+            "brewer": "Rekorderlig Ciders",
+            "beers": [
+                "Strawberry-Lime",
+                "Wild Berry",
+                "Pear"
+            ]
+        },
+        {
+            "brewer": "RJ Rocker's",
+            "beers": [
+                "Bell Ringer",
+                "Son of a Peach",
+                "Witty Twister"
+            ]
+        },
+        {
+            "brewer": "Rock Brothers",
+            "beers": [
+                "Nare Sugar Brown",
+                "High Road"
+            ]
+        },
+        {
+            "brewer": "Royal Jamaincan",
+            "beers": [
+                "Alcoholic Ginger Beer"
+            ]
+        },
+        {
+            "brewer": "Sierra Nevada",
+            "beers": [
+                "Pale Ale",
+                "Torpedo",
+                "Flipside Red",
+                "Narwhal"
+            ]
+        },
+        {
+            "brewer": "Sixpoint",
+            "beers": [
+                "Resin X2IPA",
+                "Sweet Action Cream Ale"
+            ]
+        },
+        {
+            "brewer": "Sonoma Ciders",
+            "beers": [
+                "Hatchet Apple Cider",
+                "Anvil Bourbon Apple Cider"
+            ]
+        },
+        {
+            "brewer": "Southern Tier",
+            "beers": [
+                "2x IPA",
+                "Pumking",
+                "2x Mas",
+                "Warlock"
+            ]
+        },
+        {
+            "brewer": "St. Arnold's",
+            "beers": [
+                "Lawnmower Fancy Beer",
+                "Elissa IPA",
+                "Seasonal",
+                "Santo"
+            ]
+        },
+        {
+            "brewer": "Stone",
+            "beers": [
+                "Goto IPA",
+                "Smoked Porter",
+                "Sublimely Self-Righteous"
+            ]
+        },
+        {
+            "brewer": "Swamphead",
+            "beers": [
+                "CottonMouth",
+                "Midnight Oil",
+                "Stump Knocker",
+                "Big Nose IPA",
+                "Wild Night"
+            ]
+        },
+        {
+            "brewer": "Sweetwater",
+            "beers": [
+                "420",
+                "IPA",
+                "Blue"
+            ]
+        },
+        {
+            "brewer": "Terrapin",
+            "beers": [
+                "Recreation Ale",
+                "Hi-5 IPA",
+                "Hopsecutioner",
+                "Pumpkinfest"
+            ]
+        },
+        {
+            "brewer": "Vermond Hard Cider",
+            "beers": [
+                "Magner's",
+                "Magner's Pear",
+                "Woodchuck Amber",
+                "Woodchuck Granny"
+            ]
+        },
+        {
+            "brewer": "Victory",
+            "beers": [
+                "Golden Monkey",
+                "Dirt Wolf",
+                "Seasonal",
+                "Hop Devil"
+            ]
+        },
+        {
+            "brewer": "Westmalle",
+            "beers": [
+                "Tripel"
+            ]
+        },
+        {
+            "brewer": "Woodchuck Cider",
+            "beers": [
+                "Pink",
+                "Hopsation",
+                "Fall",
+                "Pumpkin"
+            ]
+        },
+        {
+            "brewer": "5 Rabbit Cerveceria",
+            "beers": [
+                "Super Pils Imperial Pilsner",
+                "5 Lizzard Latin-Style Wit"
+            ]
+        }
+    ],
+    "Locals": [
+        {
+            "brewer": "BJ's",
+            "beers": [
+                "Harvest Hefeweizen",
+                "Jeremiah Red"
+            ]
+        },
+        {
+            "brewer": "GrassLand's",
+            "beers": [
+                "Rising Embers Tropical IPA",
+                "Groundation Amber Rye",
+                "Controlled Burn Imperial IPA",
+                "Furbee Slurpee Sour"
+            ]
+        },
+        {
+            "brewer": "Momo's",
+            "beers": [
+                "Hopnosis Double IPA",
+                "Big Popa Porter",
+                "El Dorado Pale Ale"
+            ]
+        },
+        {
+            "brewer": "Proof",
+            "beers": [
+                "Guru IPA",
+                "In Session Pale Ale",
+                "Creatures in the Dark Imperial Stout",
+                "Jalapeno Minto Mango Wit"
+            ]
+        }
+    ],
+    "Homebrewers": [
+        {
+            "brewer": "Beerd",
+            "beers": [
+                "Imperial Black IPA"
+            ]
+        },
+        {
+            "brewer": "Big Bass",
+            "beers": [
+                "Old #7 Oatmeal Coffee Stout",
+                "Citron-Ella Citra Double IPA",
+                "BassToberfest"
+            ]
+        },
+        {
+            "brewer": "Canopy Roads",
+            "beers": [
+                "Moccasin Gap Florida Pale Ale",
+                "Old Bainbridge English Brown Ale",
+                "Miccosukee Honey Orange Wheat",
+                "Centerville Tangerine Saison",
+                "Coffee Milk Stout",
+                "Smoky Hollow Smoked Amber Ale",
+                "Velda Caramel Cinder",
+                "Meridian Tropical IPA",
+                "Pisgah Porter",
+                "Backporch Cherry"
+            ]
+        },
+        {
+            "brewer": "HammerHead's",
+            "beers": [
+                "Duseldorf Alt",
+                "Imperial Rye IPA"
+            ]
+        },
+        {
+            "brewer": "Lofty Intentions",
+            "beers": [
+                "Harley Hefeweizen",
+                "Diveney Nut Brown Ale"
+            ]
+        },
+        {
+            "brewer": "TDO",
+            "beers": [
+                "Crooked River Milk Stout"
+            ]
+        },
+        {
+            "brewer": "TNT",
+            "beers": [
+                "American Amber",
+                "Coffee Stout"
+            ]
+        }
+    ]
+}

@@ -1,18 +1,45 @@
 var Store = window.localStorage;
+var beerListUrl = 'https://gist.githubusercontent.com/chrismeyersfsu/180ba7e0d96ef6170927/raw/2014_brewfest_beer_list.json';
 
 function onLoad( event, ui ) {
-  var beerList = getBeerList();
-  for (var h=0; h < beerList.length; ++h) {
-    var beer = beerList[h];
-    for (var i=0; i < beer.rating; ++i) {
-      appendPumpkin($(beer.checkbox).prev());
+  refreshBeerList(function(err, html) {
+    html = '<fieldset data-role="controlgroup">' + html + '</fieldset>';
+    $('#beerListview').html(html).trigger('create');
+    //$('#beerListview').listview().listview('refresh');
+
+    var beerList = getBeerList();
+    for (var h=0; h < beerList.length; ++h) {
+      var beer = beerList[h];
+      for (var i=0; i < beer.rating; ++i) {
+        appendPumpkin($(beer.checkbox).prev());
+      }
+      var element = $(beer.checkbox).attr('checked', beer.checked);
+      element.checkboxradio('refresh');
     }
-    if (beer.checked) {
-      console.log("Beer checked");
-    }
-    var element = $(beer.checkbox).attr('checked', beer.checked);
-    element.checkboxradio('refresh');
-  }
+
+    
+    $('input').change(function() {
+      var beerName = getBeerNameFromLabel($('label[for="' + this.id + '"]'));
+
+      var label = $(this).prev();
+      var count = countPumpkins(label);
+      if (this.checked == true && count == 0) {
+        // noop
+      } else if (count >= 3) {
+        this.checked = false;
+        $(label).children('img').remove();
+      } else {
+        this.checked = true;
+        appendPumpkin(label);
+      }
+      count = countPumpkins(label);
+      Store.setItem(beerName+'-rating', count);
+      
+      if (this.checked) { Store.setItem(beerName, "true"); }
+      else { Store.setItem(beerName, "false"); }
+    });
+
+  });
 }
 
 $(document).on('pagecreate', function(e) {
@@ -27,27 +54,6 @@ $(document).on('pagecreate', function(e) {
 $(document).ready(function() {
   $(document).pagecontainer({ defaults: true });
   var showPasteDialog = 'showPasteDialog';
-
-  $('input').change(function() {
-    var beerName = getBeerNameFromLabel($('label[for="' + this.id + '"]'));
-
-    var label = $(this).prev();
-    var count = countPumpkins(label);
-    if (this.checked == true && count == 0) {
-      // noop
-    } else if (count >= 3) {
-      this.checked = false;
-      $(label).children('img').remove();
-    } else {
-      this.checked = true;
-      appendPumpkin(label);
-    }
-    count = countPumpkins(label);
-    Store.setItem(beerName+'-rating', count);
-    
-    if (this.checked) { Store.setItem(beerName, "true"); }
-    else { Store.setItem(beerName, "false"); }
-  });
 
   $('#export').click(function(e) {
     mixpanel.track("Export Beer List, Click");
@@ -253,4 +259,27 @@ function resetAllBeer() {
     var rating = ratings[i];
     $(rating).remove();
   }
+}
+
+function refreshBeerList(cb) {
+  var count = 0;
+  $.get(beerListUrl, function (data) {
+    var html = '';
+    data = JSON.parse(data);
+    for (var key in data) {
+      html += '<div class="ui-bar ui-bar-a">' + key + "</div>\n";
+
+      for (var i=0; i < data[key].length; ++i) {
+        var entry = data[key][i];
+        html += '<div class="ui-bar ui-bar-a">' + entry.brewer + "</div>\n";
+        for (var j=0; j < entry.beers.length; ++j) {
+          var beer = entry.beers[j];
+          html += '<input type="checkbox" name="checkbox-'+count+'" id="checkbox-'+count+'">';
+          html += '<label for="checkbox-'+count+'" brewer="'+entry.brewer+'" beer="'+beer+'">'+beer+'</label>\n';
+          count++;
+        }
+      }
+    }
+    cb && cb(null, html);
+  });
 }
