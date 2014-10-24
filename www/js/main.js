@@ -72,7 +72,7 @@ $(document).ready(function() {
   $('#exportTweet').click(function(e) {
     var beerNames = generateFullBeerNames(getCheckedBeerList());
     generateLink(beerNames.join('\n'), function (err, fileUrl) {
-      var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out the list of beers I tried @brewfesttlh');
+      var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out my #beerlist from @brewfesttlh');
       popitup(url);
     });
   }); // exportTweet
