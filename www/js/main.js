@@ -17,6 +17,7 @@ function onLoad( event, ui ) {
 
 $(document).on('pagecreate', function(e) {
   if (e.target.id == "indexPage") {
+    mixpanel.track("homepage loaded", { page : 'index' });
     onLoad();
   } else {
     console.log("Id: ", e.target.id);
@@ -103,6 +104,12 @@ $(document).ready(function() {
     $('#navPanel').panel('toggle');
   });
 */
+  $(document).on('panelclose', function() {
+    mixpanel.track("nav panel interaction", { page : 'navpanel', action : 'close'  });
+  });
+  $(document).on('panelopen', function() {
+    mixpanel.track("nav panel interaction", { page : 'navpanel', action : 'open'  });
+  });
 }); // ready()
 
 function generateLink(content, cb) {
