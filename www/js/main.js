@@ -13,7 +13,6 @@ function onLoad( event, ui ) {
     var element = $(beer.checkbox).attr('checked', beer.checked);
     element.checkboxradio('refresh');
   }
-  Pace.stop();
 }
 
 $(document).on('pagecreate', function(e) {
@@ -72,7 +71,7 @@ $(document).ready(function() {
   $('#exportTweet').click(function(e) {
     var beerNames = generateFullBeerNames(getCheckedBeerList());
     generateLink(beerNames.join('\n'), function (err, fileUrl) {
-      var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out my #beerlist from @brewfesttlh');
+      var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out my beer from @brewfesttlh')+'&hashtags=beerlist,brewfesttlh2014';
       popitup(url);
     });
   }); // exportTweet
