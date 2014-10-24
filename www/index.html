@@ -1,12 +1,21 @@
 <!doctype html>
 <html>
 <head>
+    <script>
+      window.paceOptions = {
+        restartOnRequestAfter: false,
+        restartOnPushState: false
+      };
+    </script>
+
     <title>My Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">    <!-- ios fullscreen, when launched from desktop shortcut -->
     <meta name="mobile-web-app-capable" content="yes"> <!-- chrome fullscreen, when launched from desktop shortcut -->
-    <link rel="stylesheet" href="css/atom.css" />
+
     <script src="js/pace.min.js"></script>
+    <link rel="stylesheet" href="css/atom.css" />
+
     <link rel="stylesheet" href="themes/brewfest.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" /> 

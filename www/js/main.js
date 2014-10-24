@@ -11,6 +11,7 @@ function onLoad( event, ui ) {
     var element = $(beer.checkbox).attr('checked', beer.checked);
     element.checkboxradio('refresh');
   }
+  Pace.stop();
 }
 $(document).on('pagecreate', function(e) {
   if (e.target.id == "indexPage") {
@@ -23,6 +24,7 @@ $(document).on('pagecreate', function(e) {
 var Store = window.localStorage;
 
 $(document).ready(function() {
+
   $(document).pagecontainer({ defaults: true });
   var showPasteDialog = 'showPasteDialog';
 
