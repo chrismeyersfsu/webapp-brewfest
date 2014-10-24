@@ -84,11 +84,12 @@ for (var i=0; i < obj.titles.length; ++i) {
 		HTML += elementHTML;
 		for (var k=0; k < catEntry.beers.length; ++k) {
 			var beerEntry = catEntry.beers[k];
-			elementHTML = util.format('%s<input type="checkbox" name="checkbox-%s" id="checkbox-%s"><label for="checkbox-%s">%s</label>\n',
+			elementHTML = util.format('%s<input type="checkbox" name="checkbox-%s" id="checkbox-%s"><label for="checkbox-%s" beer="%s">%s</label>\n',
 			tabs,
 			checkboxCount,
 			checkboxCount,
 			checkboxCount,
+			beerEntry,
 			beerEntry);
 
 			HTML += elementHTML;

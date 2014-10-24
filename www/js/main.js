@@ -1,8 +1,12 @@
 function onLoad( event, ui ) {
-  console.log("Page container loaded");
   var beerList = getBeerList();
   beerList.forEach(function(beer) {
-    console.log("Beer checked:", beer.checked);
+    for (var i=0; i < beer.rating; ++i) {
+      appendPumpkin($(beer.checkbox).prev());
+    }
+    if (beer.checked) {
+      console.log("Beer checked");
+    }
     $(beer.checkbox).prop('checked', beer.checked).checkboxradio('refresh');
   });
 }
@@ -14,14 +18,7 @@ $(document).ready(function() {
   var showPasteDialog = 'showPasteDialog';
 
   $('input').change(function() {
-    var beerName = $('label[for="' + this.id + '"]').html();
-    if (this.checked) {
-      console.log("Saving TRUE: ", beerName);
-      Store.setItem(beerName, "true");
-    } else {
-      console.log("Saving FALSE: ", beerName);
-      Store.setItem(beerName, "false");
-    }
+    var beerName = getBeerNameFromLabel($('label[for="' + this.id + '"]'));
 
     var label = $(this).prev();
     var count = countPumpkins(label);
@@ -32,13 +29,16 @@ $(document).ready(function() {
       $(label).children('img').remove();
     } else {
       this.checked = true;
-      label.append('<img class="picture" src="images/Pumpkin-icon-24x24.png">');
+      appendPumpkin(label);
     }
+    count = countPumpkins(label);
+    Store.setItem(beerName+'-rating', count);
+    
+    if (this.checked) { Store.setItem(beerName, "true"); }
+    else { Store.setItem(beerName, "false"); }
   });
 
   $('#export').click(function(e) {
-    console.log("Exported");
-
     $('#pasteArea').val(getCheckedBeerNames());
     $('#pasteDialog').popup('open');
   });
@@ -52,7 +52,6 @@ $(document).ready(function() {
   });
 
   $('#exportTweet').click(function(e) {
-    console.log("Export tweet clicked");
     generateLink(getCheckedBeerNames().join('\n'), function (err, fileUrl) {
       var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out the list of beers I tried @brewfesttlh');
       popitup(url);
@@ -77,11 +76,9 @@ function generateLink(content, cb) {
     crossDomain: true,
     data: JSON.stringify(content), 
     success: function(res) {
-      console.log("Success!");
       cb(null, res.files['content.txt'].raw_url);
     },
     error: function(res, textStatus, errorThrown) {
-      console.log("Fail!");
       cb(errorThrown);
     }
   });
@@ -93,9 +90,10 @@ function getBeerList() {
   for (var i=0; i < checkboxes.length; ++i) {
     var checkbox = checkboxes[i];
     var label = $('label[for="' + checkbox.id + '"]');
-    var beerName = $(label).html();
+    var beerName = getBeerNameFromLabel(label);
 
     var checked = Store.getItem(beerName);
+    var rating = Store.getItem(beerName+'-rating');
     if (checked === undefined || checked === null || checked === "false") {
       checked = false;
     } else {
@@ -105,7 +103,7 @@ function getBeerList() {
       checkbox: checkbox,
       name: beerName,
       checked: checked,
-      rating: 0
+      rating: rating
     });
   }
 
@@ -138,6 +136,15 @@ function popitup(url) {
 }
 
 function countPumpkins(element) {
-  return $(element).children('img').length;
+  var elements = $(element).children('img');
+  return elements.length;
+}
+
+function appendPumpkin(element) {
+  element.append('<img class="picture" src="images/Pumpkin-icon-24x24.png">');
+}
+
+function getBeerNameFromLabel(label) {
+  return $(label).attr('beer');
 }
 
