@@ -61,6 +61,10 @@ $(document).ready(function() {
   $('#fullscreen').click(function(e) {
     toggleFullScreen();
   });
+
+  $('#refresh').click(function(e) {
+    window.location.reload();
+  });
 });
 
 
