@@ -17,7 +17,7 @@ function onLoad( event, ui ) {
       element.checkboxradio('refresh');
     }
 
-    
+
     $('input').change(function() {
       var beerName = getBeerNameFromLabel($('label[for="' + this.id + '"]'));
 
@@ -194,7 +194,7 @@ function getCheckedBeerList() {
 function generateFullBeerNames(beerList) {
   var beerNames = [];
   for (var i=0; i < beerList.length; ++i) {
-    beerNames.push(beerList[i].brewer + ' - ' + beerList[i].name);
+    beerNames.push([beerList[i].brewer, beerList[i].name, beerList[i].rating].join(', '));
   }
   return beerNames;
 }
