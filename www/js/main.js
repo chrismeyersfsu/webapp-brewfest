@@ -50,60 +50,71 @@ $(document).ready(function() {
   });
 
   $('#export').click(function(e) {
+    mixpanel.track("Export Beer List, Click");
     var beerNames = generateFullBeerNames(getCheckedBeerList());
     if (!beerNames || beerNames.length == 0) {
+      mixpanel.track("Export Beer List, No beer");
       $('#exportNothingDialog').popup('open');
       //$(document).pagecontainer('change', $('#exportNothingDialog'), { role: "dialog" });
     } else {
+      mixpanel.track("Export Beer List");
       $('#pasteArea').val(beerNames.join('\n'));
       $('#exportDialog').popup('open');
     }
   });
 
   $('#exportLink').click(function(e) {
+    mixpanel.track("Export Beer List Link, Click");
     var beerNames = generateFullBeerNames(getCheckedBeerList());
     generateLink(beerNames.join('\n'), function(err, url) {
       if (err) { return console.log("Error creating link:", err); }
+      mixpanel.track("Export Beer List Link", { url: url } );
       // TODO: maybe window.location
       popitup(url);
     });
   });
 
   $('#exportTweet').click(function(e) {
+    mixpanel.track("Tweet Beer List, Click");
     var beerNames = generateFullBeerNames(getCheckedBeerList());
     if (!beerNames || beerNames.length == 0) {
+      mixpanel.track("Tweet Beer List, No beer to tweet");
       $('#exportNothingDialog').popup('open');
       return;
     }
     generateLink(beerNames.join('\n'), function (err, fileUrl) {
       var url = 'https://twitter.com/intent/tweet?url='+encodeURI(fileUrl)+'&text='+encodeURI('Check out my beer from @brewfesttlh')+'&hashtags=brewcard,brewfesttlh2014';
+      mixpanel.track("Tweet Beer List", { url: url } );
       popitup(url);
     });
   }); // exportTweet
 
   $('#fullscreen').click(function(e) {
+    mixpanel.track("Fullscreen, Click");
     toggleFullScreen();
   });
 
   $('#refresh').click(function(e) {
+    mixpanel.track("Refresh, Click");
     window.location.reload();
   });
 
   $('#clear').click(function(e) {
+    mixpanel.track("Clear Beer List, Click");
     $('#clearDialog').popup('open');
   });
 
   $('#clear-yes').click(function(e) {
-    console.log("Clearing");
+    mixpanel.track("Clear Beer List, Yes");
     resetAllBeer();
     $('#navPanel').panel('toggle');
     return true;
   });
-  /*
+
   $('#clear-no').click(function(e) {
-    $('#navPanel').panel('toggle');
+    mixpanel.track("Clear Beer List, No");
   });
-*/
+
   $(document).on('panelclose', function() {
     mixpanel.track("nav panel interaction", { page : 'navpanel', action : 'close'  });
   });
