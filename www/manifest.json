@@ -1,5 +1,6 @@
 {
   "name": "Brewfest",
+  "version": "0.1",
   "icons": [
     {
       "src": "images/android/drawable-ldpi/ic_launcher.png",
