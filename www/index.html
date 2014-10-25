@@ -121,15 +121,17 @@
 
 
         <div data-role="popup" id="exportDialog" data-overlay-theme="a" data-theme="a" data-dismissible="true" style="max-width:400px;">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <div data-role="header" data-theme="a">
             <h1>Copy your beer</h1>
             </div>
             <div role="main" class="ui-content">
-                <textarea id="pasteArea" readonly="readonly" cols="50"></textarea>
+                <textarea id="pasteArea" readonly="true" cols="50" onclick="this.focus();this.select()"></textarea>
+                <!--
                 <div style="text-align: center">
                     <a href="#" id="exportLink" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Link</a>
-                    <!-- <a href="#" id="exportTweet" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Tweet</a> -->
                 </div>
+                -->
             </div>
         </div>
 
