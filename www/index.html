@@ -9,6 +9,9 @@
     </script>
 
     <title>Brewcard</title>
+    <!-- Android Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
     <!-- Facebook -->
     <meta property="og:title" content="Brewcard" />
     <meta property="og:type" content="website" />       
@@ -141,6 +144,20 @@
                 <h1>Try marking a beer first</h1>
                 <div style="text-align: center">
                     <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Dismiss</a>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="popup" id="notesDialog" data-overlay-theme="a" data-theme="a" data-dismissible="true" style="max-width:400px;">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+            <div data-role="header" data-theme="a">
+                <h1>Notes</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div style="text-align: center">
+                    <textarea id="notesArea" cols="50" rows="50"></textarea>
+                    <a href="#" id="save-notes" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a">Save</a>
                 </div>
             </div>
         </div>

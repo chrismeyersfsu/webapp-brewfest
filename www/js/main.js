@@ -1,7 +1,28 @@
 var Store = window.localStorage;
 var beerListUrl = 'https://gist.githubusercontent.com/chrismeyersfsu/180ba7e0d96ef6170927/raw/2014_brewfest_beer_list.json';
 
+var Dialogs = {
+  notes: null,
+  exportNothing: null,
+  export: null,
+  clear: null,
+};
+
 function onLoad( event, ui ) {
+  /*
+  Dialogs.notes = $('#notesDialog').popup({
+    afteropen: function( event, ui ) {
+      $('#notesArea').focus();
+    },
+    afterclose: function(event,ui) {
+
+    }
+  });
+*/
+  Dialogs.exportNothing = $('#exportNothingDialog').popup();
+  Dialogs.export = $('#exportDialog').popup();
+  Dialogs.clear = $('#clearDialog').popup();
+
   refreshBeerList(function(err, html) {
     html = '<fieldset data-role="controlgroup">' + html + '</fieldset>';
     $('#beerListview').html(html).trigger('create');
@@ -17,6 +38,11 @@ function onLoad( event, ui ) {
       element.checkboxradio('refresh');
     }
 
+/*
+    $('.ui-checkbox').on('taphold', function() {
+      Dialogs.notes.popup('open');
+    });
+*/
 
     $('input').change(function() {
       var beerName = getBeerNameFromLabel($('label[for="' + this.id + '"]'));
@@ -60,12 +86,12 @@ $(document).ready(function() {
     var beerNames = generateFullBeerNames(getCheckedBeerList());
     if (!beerNames || beerNames.length == 0) {
       mixpanel.track("Export Beer List, No beer");
-      $('#exportNothingDialog').popup('open');
+      Dialogs.exportNothing.popup('open');
       //$(document).pagecontainer('change', $('#exportNothingDialog'), { role: "dialog" });
     } else {
       mixpanel.track("Export Beer List");
       $('#pasteArea').val(beerNames.join('\n'));
-      $('#exportDialog').popup('open');
+      Dialogs.export.popup('open');
     }
   });
 
@@ -85,7 +111,7 @@ $(document).ready(function() {
     var beerNames = generateFullBeerNames(getCheckedBeerList());
     if (!beerNames || beerNames.length == 0) {
       mixpanel.track("Tweet Beer List, No beer to tweet");
-      $('#exportNothingDialog').popup('open');
+      Dialogs.exportNothing.popup('open');
       return;
     }
     generateLink(beerNames.join('\n'), function (err, fileUrl) {
@@ -107,7 +133,7 @@ $(document).ready(function() {
 
   $('#clear').click(function(e) {
     mixpanel.track("Clear Beer List, Click");
-    $('#clearDialog').popup('open');
+    Dialogs.clear.popup('open');
   });
 
   $('#clear-yes').click(function(e) {
@@ -128,6 +154,17 @@ $(document).ready(function() {
     mixpanel.track("nav panel interaction", { page : 'navpanel', action : 'open'  });
   });
 }); // ready()
+
+
+
+
+
+
+
+
+
+
+
 
 function generateLink(content, cb) {
   var content = {
