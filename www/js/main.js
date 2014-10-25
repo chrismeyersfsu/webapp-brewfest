@@ -121,6 +121,19 @@ $(document).ready(function() {
     });
   }); // exportTweet
 
+  $('#exportEmail').click(function(e) {
+    mixpanel.track("Email Beer List, Click");
+    var beerNames = generateFullBeerNames(getCheckedBeerList());
+    if (!beerNames || beerNames.length == 0) {
+      mixpanel.track("Email Beer List, No beer to email");
+      Dialogs.exportNothing.popup('open');
+      return;
+    }
+    var url = 'mailto:?'+encodeURI('subject=My Fav. Brewfest Beer')+'&body='+encodeURI(beerNames.join('\n'));
+    window.location = url;
+    //popitup(url);
+  });
+
   $('#fullscreen').click(function(e) {
     mixpanel.track("Fullscreen, Click");
     toggleFullScreen();
