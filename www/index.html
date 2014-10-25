@@ -41,6 +41,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">    <!-- ios fullscreen, when launched from desktop shortcut -->
     <meta name="mobile-web-app-capable" content="yes"> <!-- chrome fullscreen, when launched from desktop shortcut -->
+    <meta charset="utf-8"> <!-- strange jquery mobile controlgroup if not set -->
 
     <script type="text/javascript" async src="js/pace.min.js"></script>
 
@@ -90,19 +91,21 @@
     <div id="indexPage" data-role="page">
 
         <div data-role="panel" id="navPanel" data-theme="a">
-            <ul data-role="listview">
+            <ul data-role="listview" data-dividertheme="a">
                 <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
-                <li data-icon="twitter"><a href="#" id="exportTweet" data-rel="close">Tweet Beer List</a></li>
-                <li data-icon="mail"><a href="#" id="exportEmail" data-rel="close">Email Beer List</a></li>
-                <li data-icon="cloud-upload"><a href="#" id="export" data-rel="close">Share Beer List</a></li>
+                <li data-role="list-divider">Share Beer List</li>
+                <li data-icon="twitter"><a href="#" id="exportTweet" data-rel="close">Tweet</a></li>
+                <li data-icon="mail"><a href="#" id="exportEmail" data-rel="close">Email</a></li>
+                <li data-icon="clipboard"><a href="#" id="export" data-rel="close">Copy / Paste</a></li>
+                <li data-role="list-divider">Settings</li>
                 <li data-icon="trash-o"><a href="#" id="clear" data-rol="close">Clear Beer</a></li>
                 <li data-icon="refresh"><a href="#" id="refresh" data-rel="close">Refresh</a></li>
+            </ul>
             <br />
             <div style="text-align: center">
-            <h4>Made by Chris Meyers</h4>
-            <a href="https://twitter.com/intent/tweet?screen_name=oldmanmeyers85&text=%40brewfesttlh" class="twitter-mention-button" data-size="large" data-related="oldmanmeyers85">Tweet at @oldmanmeyers85</a>
+                <h4>Made by Chris Meyers</h4>
+                <a href="https://twitter.com/intent/tweet?screen_name=oldmanmeyers85&text=%40brewfesttlh" class="twitter-mention-button" data-size="large" data-related="oldmanmeyers85">Tweet at @oldmanmeyers85</a>
             </div>
-            </ul>
         </div><!-- /panel -->
  
         <div data-role="header" data-position="fixed" data-fullscreen="true">
