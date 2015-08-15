@@ -1,0 +1,679 @@
+{
+  "General": [
+    {
+      "brewer": "21st Amendment Brewery",
+      "beers": [
+        "Hell or High Watermelon",
+        "Brew Free or Die IPA"
+      ]
+    },
+    {
+      "brewer": "Abita Brewing",
+      "beers": [
+        "Seersucker Pils",
+        "Pecan Harvest Ale",
+        "Jackamo IPA"
+      ]
+    },
+    {
+      "brewer": "AleSmith Brewing Co.",
+      "beers": [
+        "AleSmith ESB",
+        "Wee Heavy "
+      ]
+    },
+    {
+      "brewer": "Atwater Brewery",
+      "beers": [
+        "Vanilla Java Porter",
+        "Hop a Peel"
+      ]
+    },
+    {
+      "brewer": "Aviator Brewing Co. *",
+      "beers": [
+        "Oktoberbeast",
+        "Pumpkinbeast",
+        "Devils Tramping Ground"
+      ]
+    },
+    {
+      "brewer": "B. Nektar Meadery",
+      "beers": [
+        "Zombie Killer",
+        "Kill all of the Golfers"
+      ]
+    },
+    {
+      "brewer": "Bear Republic Brewing Co.",
+      "beers": [
+        "Double Aught",
+        "Racer 5"
+      ]
+    },
+    {
+      "brewer": "Beer Army Combat Brewery *",
+      "beers": [
+        "Rebellious Patriot",
+        "Heros Never Die"
+      ]
+    },
+    {
+      "brewer": "Belhaven Brewery",
+      "beers": [
+        "Belhaven Twisted Thistle",
+        "Belhaven Scottish Ale"
+      ]
+    },
+    {
+      "brewer": "Big Boss Brewing *",
+      "beers": [
+        "Harvest Time",
+        "High Roller IPA",
+        "Bad Penny Brown Ale"
+      ]
+    },
+    {
+      "brewer": "Birra Moretti",
+      "beers": [
+        "Moretti Pilsner",
+        "La Rossa"
+      ]
+    },
+    {
+      "brewer": "Blue Point Brewing Co.",
+      "beers": [
+        "Toasted Lager",
+        "Hoptical Illusion",
+        "Mosiac Session IPA",
+        "Pumpkin Ale"
+      ]
+    },
+    {
+      "brewer": "Blue Point Brewing Co.",
+      "beers": [
+        "Oktoberfest",
+        "RastafaRye"
+      ]
+    },
+    {
+      "brewer": "Bombshell Beer Co. *",
+      "beers": [
+        "Polished Pilsner",
+        "Lemon Grass Pale Ale",
+        "Black IPA"
+      ]
+    },
+    {
+      "brewer": "Brasserie Caracole <>",
+      "beers": [
+        "Carcacole Nostradamus",
+        "Caracole Saxo"
+      ]
+    },
+    {
+      "brewer": "Brasserie Dubuisson <>",
+      "beers": [
+        "Cuvee de Trolls"
+      ]
+    },
+    {
+      "brewer": "Brasserie Dupont <>",
+      "beers": [
+        "Saison Dupont",
+        "Saison Dupont Cuvee"
+      ]
+    },
+    {
+      "brewer": "Brasserie Lefebvre <>",
+      "beers": [
+        "Blanche de Bruxelles"
+      ]
+    },
+    {
+      "brewer": "Bull City Burger and Brewery *",
+      "beers": [
+        "Parrish Street Pale",
+        "Stierstadt Octoberfest",
+        "Rattelade RyePA",
+        "Barrel Aged Pumpkin"
+      ]
+    },
+    {
+      "brewer": "Bull City Burger and Brewery *",
+      "beers": [
+        "Calvinator Doppelbock"
+      ]
+    },
+    {
+      "brewer": "Bull City Ciderworks *",
+      "beers": [
+        "Off Main Cider",
+        "Smooth Hoperator"
+      ]
+    },
+    {
+      "brewer": "Carolina Brewery *",
+      "beers": [
+        "Oktoberfest",
+        "Oatmeal Porter",
+        "Flagship IPA"
+      ]
+    },
+    {
+      "brewer": "Carolina Brewing Co. *",
+      "beers": [
+        "Nut Brown Ale",
+        "Oktoberfest"
+      ]
+    },
+    {
+      "brewer": "Coronado Brewing Co.",
+      "beers": [
+        "Islander IPA",
+        "Mermaid Red"
+      ]
+    },
+    {
+      "brewer": "Crank Arm Brewing Co. *",
+      "beers": [
+        "Rickshaw Rye IPA",
+        "Unicycle Pale Ale"
+      ]
+    },
+    {
+      "brewer": "Crazy Mountain Brewing Co.",
+      "beers": [
+        "Mountain Livin Pale Ale",
+        "Lava Lake Wit"
+      ]
+    },
+    {
+      "brewer": "D9 Brewing Co. *",
+      "beers": [
+        "Viking Fraoch",
+        "Experiment #12",
+        "Hakuna Matata",
+        "Bailando - Peruvian Chocolate Ale"
+      ]
+    },
+    {
+      "brewer": "Deep River Brewing Co. *",
+      "beers": [
+        "Double D's Watermelon",
+        "4042 Stout"
+      ]
+    },
+    {
+      "brewer": "Dirtbag Ales *",
+      "beers": [
+        "Blood Orange Kolsch",
+        "The IPA"
+      ]
+    },
+    {
+      "brewer": "Dog Tag Brewing",
+      "beers": [
+        "IPA",
+        "Kolsch"
+      ]
+    },
+    {
+      "brewer": "Double Barley Brewing *",
+      "beers": [
+        "Steak Cake",
+        "Abby's Amber Ale",
+        "Touche' IPA"
+      ]
+    },
+    {
+      "brewer": "Duchesse De Bourgogne <>",
+      "beers": [
+        "Duchesse de Bourgogne"
+      ]
+    },
+    {
+      "brewer": "Duck-Rabbit Craft Brewery *",
+      "beers": [
+        "Milk Stout",
+        "Hoppy Bunny"
+      ]
+    },
+    {
+      "brewer": "Erie Brewing",
+      "beers": [
+        "Railbender Scottish",
+        "Pilsner"
+      ]
+    },
+    {
+      "brewer": "Florida Beer Co.",
+      "beers": [
+        "Sunshine State Pils",
+        "Swamp Ape DIPA",
+        "Southernmost Wheat"
+      ]
+    },
+    {
+      "brewer": "Foothills Brewing *",
+      "beers": [
+        "Oktoberfest",
+        "Torch Pilsner",
+        "Hoppyum IPA"
+      ]
+    },
+    {
+      "brewer": "Fortnight Brewery and Pub *",
+      "beers": [
+        "X-pat IPA",
+        "Porter"
+      ]
+    },
+    {
+      "brewer": "Founders Brewing Co.",
+      "beers": [
+        "All Day IPA",
+        "Breakfast Stout"
+      ]
+    },
+    {
+      "brewer": "Fullsteam Brewery *",
+      "beers": [
+        "Cack-a-lacky Ginger Pale",
+        "Fearrington Fall"
+      ]
+    },
+    {
+      "brewer": "Goose Island Beer Co.",
+      "beers": [
+        "312 Wheat",
+        "The Muddy",
+        "Pale Ale",
+        "Ogden Tripel"
+      ]
+    },
+    {
+      "brewer": "Great Lakes Brewing Co.",
+      "beers": [
+        "Edmund Fitzgerald Porter",
+        "Nosfaratu"
+      ]
+    },
+    {
+      "brewer": "Green's Gluten Free",
+      "beers": [
+        "Tripel"
+      ]
+    },
+    {
+      "brewer": "Harpoon Brewery",
+      "beers": [
+        "Harpoon IPA",
+        "UFO White"
+      ]
+    },
+    {
+      "brewer": "Haw River Farmhouse Ales *",
+      "beers": [
+        "St. Benedict's Breakfast Dubbel",
+        "Regent's Rye Tripel",
+        "TBD-Special Tapping"
+      ]
+    },
+    {
+      "brewer": "Humboldt Brewing Co.",
+      "beers": [
+        "Nectar IPA",
+        "Brown Help Ale"
+      ]
+    },
+    {
+      "brewer": "Humboldt Brewing Co.",
+      "beers": [
+        "St. Louis Premium Framboise"
+      ]
+    },
+    {
+      "brewer": "Kasteel <>",
+      "beers": [
+        "Kasteel Rouge",
+        "Kasteel Cuvee Chateau",
+        "Kasteel Donker",
+        "St. Louis Premium Kriek"
+      ]
+    },
+    {
+      "brewer": "Knee Deep Brewing Co.",
+      "beers": [
+        "Hoptologist IPA",
+        "Citra Extra Pale Ale"
+      ]
+    },
+    {
+      "brewer": "Lagunitas Brewing Co.",
+      "beers": [
+        "Pils",
+        "Fusion IPA"
+      ]
+    },
+    {
+      "brewer": "Lindemens <>",
+      "beers": [
+        "Framboise",
+        "Gueuze Cuvee"
+      ]
+    },
+    {
+      "brewer": "Lonerider Brewery *",
+      "beers": [
+        "Shotgun Betty",
+        "Tombstone"
+      ]
+    },
+    {
+      "brewer": "Mad River Brewing Co.",
+      "beers": [
+        "Flor de Jamaica",
+        "Steelhead Double IPA"
+      ]
+    },
+    {
+      "brewer": "Mother Earth Brewing *",
+      "beers": [
+        "Weeping Willow Wit",
+        "Old Neighborhood Oatmeal Stout"
+      ]
+    },
+    {
+      "brewer": "Mystery Brewing Co. *",
+      "beers": [
+        "Fantine Red Belgian IPA",
+        "Pickwick English Mild",
+        "Rosalind Fall Saison"
+      ]
+    },
+    {
+      "brewer": "Natty Greene's Brewing Co. *",
+      "beers": [
+        "Freedom IPA",
+        "Buckshot Amber",
+        "Wildflower Wit"
+      ]
+    },
+    {
+      "brewer": "New Belgium Brewing",
+      "beers": [
+        "Lips of Faith Gruit",
+        "Ranger IPA"
+      ]
+    },
+    {
+      "brewer": "Nickelpoint Brewing Co. *",
+      "beers": [
+        "Belgian Golden Ale",
+        "India Pale Ale",
+        "Blonde Ale",
+        "Porter"
+      ]
+    },
+    {
+      "brewer": "Old Speckled Hen",
+      "beers": [
+        "Old Speckled Hen",
+        "Crafty Hen"
+      ]
+    },
+    {
+      "brewer": "Oskar Blues Brewery *",
+      "beers": [
+        "Old Chub Nitro",
+        "Dales Pale Ale",
+        "Mama's Yellow Pils"
+      ]
+    },
+    {
+      "brewer": "Railhouse Brewery *",
+      "beers": [
+        "KA-BAR Brown Ale",
+        "FCA IPA"
+      ]
+    },
+    {
+      "brewer": "Red Brick Brewing",
+      "beers": [
+        "Hoplanta IPA",
+        "Laughing Skull"
+      ]
+    },
+    {
+      "brewer": "RJ Rockers Brewing Co.",
+      "beers": [
+        "Son of a Peach",
+        "Strawberry Bomber"
+      ]
+    },
+    {
+      "brewer": "Samuel Smiths",
+      "beers": [
+        "Organic Cider",
+        "Organic Chocolate"
+      ]
+    },
+    {
+      "brewer": "SARANAC - F.X. MATT BREWERY",
+      "beers": [
+        "Octoberfest",
+        "Pumpkin Ale"
+      ]
+    },
+    {
+      "brewer": "Scaldis",
+      "beers": [
+        "Scaldis Belgian Special Ale",
+        "Scaldis Refermentee Belgian Ale"
+      ]
+    },
+    {
+      "brewer": "Shock Top",
+      "beers": [
+        "Shock Top Pumpkin",
+        "Shock Top Raspberry"
+      ]
+    },
+    {
+      "brewer": "Sierra Nevada Brewing Co. *",
+      "beers": [
+        "Pale Ale",
+        "Flipside Red IPA",
+        "No Middle Ground"
+      ]
+    },
+    {
+      "brewer": "Smuttynose Brewing Co.",
+      "beers": [
+        "Finest Kind IPA",
+        "Vunderbar Pilsner",
+        "Pumpkin Ale"
+      ]
+    },
+    {
+      "brewer": "Southampton Brewery",
+      "beers": [
+        "Burton IPA",
+        "Double White"
+      ]
+    },
+    {
+      "brewer": "Southern Pines Brewing Co. *",
+      "beers": [
+        "Plowman's Folly",
+        "The Professional"
+      ]
+    },
+    {
+      "brewer": "St Bernardus <>",
+      "beers": [
+        "St. Bernardus Abt 12",
+        "St. Bernardus Wit",
+        "St. Bernardus Tripel",
+        "St. Bernardus Extra 4"
+      ]
+    },
+    {
+      "brewer": "Starpoint Brewing *",
+      "beers": [
+        "Surfin' Buddha",
+        "24/7 Session"
+      ]
+    },
+    {
+      "brewer": "Starr Hill Brewery",
+      "beers": [
+        "Sabbath Black IPA",
+        "Grateful Pale Ale",
+        "The Love",
+        "Boxcarr Pumpkin Porter"
+      ]
+    },
+    {
+      "brewer": "Stella Artois",
+      "beers": [
+        "Stella Artois",
+        "Stella Cidre"
+      ]
+    },
+    {
+      "brewer": "Stoudts Brewing Co.",
+      "beers": [
+        "Four Play IPA",
+        "Pils"
+      ]
+    },
+    {
+      "brewer": "Sunken City Brewing Co.",
+      "beers": [
+        "Steamboat Beer",
+        "Red Clay IPA"
+      ]
+    },
+    {
+      "brewer": "SweetWater Brewing Co.",
+      "beers": [
+        "Waterkeeper",
+        "Blue",
+        "Take 2 Pils"
+      ]
+    },
+    {
+      "brewer": "The Mash House Brewery And Chophouse *",
+      "beers": [
+        "Brown Porter",
+        "Hefeweizen"
+      ]
+    },
+    {
+      "brewer": "The Olde Mecklenburg Brewery *",
+      "beers": [
+        "Copper",
+        "Mecktoberfest"
+      ]
+    },
+    {
+      "brewer": "The Unknown Brewing Co. *",
+      "beers": [
+        "Teleporter",
+        "Over the Edge IPA",
+        "No Shame Wheat Ale"
+      ]
+    },
+    {
+      "brewer": "Thirsty Dog Brewing Co",
+      "beers": [
+        "Labrador Lager",
+        "Hoppus Maximus"
+      ]
+    },
+    {
+      "brewer": "Thomas Creek Brewery",
+      "beers": [
+        "Castaway Chocolate Orange IPA",
+        "Conduplico Immundus Monachus"
+      ]
+    },
+    {
+      "brewer": "Timmermans <>",
+      "beers": [
+        "Strawberry Lambic"
+      ]
+    },
+    {
+      "brewer": "Top of the Hill Restaurant and Brewery *",
+      "beers": [
+        "Old Well White",
+        "Plott Hound Rye Pale Ale"
+      ]
+    },
+    {
+      "brewer": "Triangle Brewing Co. *",
+      "beers": [
+        "Belgian Golden Ale",
+        "Belgian White",
+        "IPA"
+      ]
+    },
+    {
+      "brewer": "Tröegs Brewing Co.",
+      "beers": [
+        "Perpetual IPA",
+        "DreamWeaver",
+        "Troegenator"
+      ]
+    },
+    {
+      "brewer": "Weihenstephan",
+      "beers": [
+        "Vitus",
+        "Original Premium",
+        "Hefe-Weissbier"
+      ]
+    },
+    {
+      "brewer": "Wells &amp; Youngs Brewery",
+      "beers": [
+        "Youngs Double Chocolate Stout",
+        "Wells Banana Bread"
+      ]
+    },
+    {
+      "brewer": "White Street Brewing Co. *",
+      "beers": [
+        "Kolsch",
+        "Scottish Ale",
+        "Hoptimist IPA",
+        "Pumpkin Ale"
+      ]
+    },
+    {
+      "brewer": "White Street Brewing Co. *",
+      "beers": [
+        "Koschei the Deathless Bourbon Barrel Imperial Stout",
+        "Milk Stout"
+      ]
+    },
+    {
+      "brewer": "William's Orchards- Sir Perry Cider",
+      "beers": [
+        "Sir Perry",
+        "Dragon's Breath Cider"
+      ]
+    },
+    {
+      "brewer": "Woodchuck Hard Cider",
+      "beers": [
+        "Woodchuck Amber",
+        "Woodchuck Fall Harvest",
+        "Woodchuck Private Reserve Pumpkin"
+      ]
+    }
+  ]
+}
